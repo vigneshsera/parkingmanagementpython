@@ -52,7 +52,7 @@ if __name__ == '__main__':
     width = int(input("Enter parking lot width : "))
     length = int(input("Enter parking lot length : "))
     pl = ParkingLot(width, length)
-    print("Number of cars can be parked in the specified parking lot : {0}", pl.get_slots_count())
+    print("Number of cars can be parked in the specified parking lot : ", pl.get_slots_count())
     number_of_cars = int(input("Enter number of cars needed to be parked : "))
     for x in range(number_of_cars):
         number_plate = input("Enter car number : ")
@@ -63,9 +63,9 @@ if __name__ == '__main__':
             status = car.park(pl, slot)
 
         if status:
-            print("Car with license plate {0} is parked successfully at slot {1}", car, car.get_slot())
+            print("Car with license plate ", car, " is parked successfully at slot ", car.get_slot())
         else:
-            print("Car with license plate {0} is not parked successfully", car)
+            print("Car with license plate ", car, " is not parked successfully")
         if pl.get_slots_count() == len(pl.slots):
             print("Parking lot is full")
             break
